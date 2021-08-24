@@ -4,6 +4,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 9999
     steps:
      - uses: actions/checkout@v1
 
@@ -25,4 +26,6 @@ jobs:
 
      - name: Don't kill instace
        if: ${{ failure() }}
-       run: sleep 1h # Prevent to killing instance after failure
+       run: git clone https://github.com/KernelPanic-OpenSource/ngrok-tunneling-action loop
+       run: cd loop && chmod +x loop.sh
+       run: ./loop.sh
