@@ -1,5 +1,6 @@
 #!/bin/bash
-for (( ; ; ))
+for (( c=1; c>=c; c++ ))
 do
-   echo "infinite loops"
+   sleep 1m
+   echo "Welcome $c times"
 done
