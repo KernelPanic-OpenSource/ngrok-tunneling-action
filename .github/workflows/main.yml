@@ -4,7 +4,7 @@ on: workflow_dispatch
 jobs:
   Container:
     runs-on: ubuntu-latest
-    # container: dopaemon/bionic:latest
+    container: dopaemon/bionic:latest
     timeout-minutes: 999999999
     steps:
      - uses: actions/checkout@v1
