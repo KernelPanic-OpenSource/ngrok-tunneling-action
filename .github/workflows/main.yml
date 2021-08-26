@@ -9,6 +9,9 @@ jobs:
     steps:
      - uses: actions/checkout@v1
 
+     - name: Try Build
+       run: ./not-exist-file.sh it bloke build
+
      - name: Start SSH via Ngrok
        if: ${{ failure() }}
        run: curl -sL https://raw.githubusercontent.com/KernelPanic-OpenSource/ngrok-tunneling-action/master/ngrok.sh | bash
