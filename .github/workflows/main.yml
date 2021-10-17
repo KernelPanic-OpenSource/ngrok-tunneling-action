@@ -5,9 +5,14 @@ jobs:
   Container:
     runs-on: ubuntu-latest
     # container: dopaemon/bionic:latest
-    timeout: 6h
     steps:
-     - uses: actions/checkout@v1
+     - uses: actions/checkout@v2
+     
+      - uses: KernelPanic-OpenSource/ngrok-tunneling-action
+        with:
+          timeout: 1h
+          port: 4000
+          ngrok_authtoken: 1zduK1GhoyyWPe6hHsJlhR1gG9R_5TNjK9mjiKXhTaC3bBSyc
 
      - name: Try Build
        run: ./not-exist-file.sh it bloke build
