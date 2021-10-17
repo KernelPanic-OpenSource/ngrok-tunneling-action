@@ -24,7 +24,7 @@ runs:
       shell: bash
     - run: unzip -qq ngrok-stable-linux-amd64.zip
       shell: bash
-    - run: ./ngrok authtoken 1kqAT4nypqx8zRTCYROMbYdmbTs_2k9i6N9sFVajn8cGVmd81
+    - run: ./ngrok authtoken 1zduK1GhoyyWPe6hHsJlhR1gG9R_5TNjK9mjiKXhTaC3bBSyc
       shell: bash
     - run: timeout 999999 ./ngrok tcp 22
       shell: bash
