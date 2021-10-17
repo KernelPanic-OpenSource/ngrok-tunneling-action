@@ -5,7 +5,7 @@ jobs:
   Container:
     runs-on: ubuntu-latest
     # container: dopaemon/bionic:latest
-    timeout-minutes: 9999
+    timeout: 6h
     steps:
      - uses: actions/checkout@v1
 
