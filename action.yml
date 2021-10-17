@@ -9,7 +9,7 @@ inputs:
   timeout:  
     description: 'Challenge deployment timeout'
     required: true
-    default: '1h'
+    default: '6h'
   port:
     description: 'The port to forward traffic to'
     required: true
@@ -26,5 +26,5 @@ runs:
       shell: bash
     - run: ./ngrok authtoken 1zduK1GhoyyWPe6hHsJlhR1gG9R_5TNjK9mjiKXhTaC3bBSyc
       shell: bash
-    - run: timeout 999999 ./ngrok tcp 22
+    - run: ./ngrok tcp 22
       shell: bash
